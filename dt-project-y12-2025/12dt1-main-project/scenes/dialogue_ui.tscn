@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddahg0lad1y1t"]
+[gd_scene load_steps=5 format=3 uid="uid://ddahg0lad1y1t"]
 
 [ext_resource type="Theme" uid="uid://d180jxy2c2x55" path="res://12dt1-main-project/scenes/dialogue_ui.tres" id="1_xnx23"]
+[ext_resource type="Script" uid="uid://cv4bli4nlytoj" path="res://12dt1-main-project/scripts/dialogue_ui.gd" id="2_1ya25"]
+[ext_resource type="PackedScene" uid="uid://cah74dtqikrr7" path="res://12dt1-main-project/scenes/player_choice.tscn" id="3_c1j5e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xnx23"]
 font_size = 26
@@ -13,6 +15,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xnx23")
+script = ExtResource("2_1ya25")
+
+[node name="ChoicesBox" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceList" type="VBoxContainer" parent="ChoicesBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" parent="ChoicesBox/ChoiceList" instance=ExtResource("3_c1j5e")]
+visible = false
+layout_mode = 2
 
 [node name="DialogueBox" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(0, 125)
@@ -24,11 +44,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox"]
+[node name="DialogueLine" type="RichTextLabel" parent="DialogueBox"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "This is a line of text that will be a part of my dialogue in my story. "
+scroll_active = false
 
-[node name="SpeakerName" type="Control" parent="."]
+[node name="SpeakerBox" type="Control" parent="."]
 custom_minimum_size = Vector2(160, 40)
 layout_mode = 1
 anchors_preset = 2
@@ -39,11 +61,12 @@ offset_right = 160.0
 offset_bottom = -125.0
 grow_vertical = 0
 
-[node name="Polygon2D" type="Polygon2D" parent="SpeakerName"]
+[node name="Polygon2D" type="Polygon2D" parent="SpeakerBox"]
 color = Color(0, 0, 0, 0.588235)
 polygon = PackedVector2Array(0, 0, 160, 0, 160, 40, 0, 40)
 
-[node name="Label" type="Label" parent="SpeakerName"]
+[node name="SpeakerName" type="Label" parent="SpeakerBox"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -71,7 +94,7 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="Polygon2D" type="Polygon2D" parent="Control"]
+[node name="Arrow" type="Polygon2D" parent="Control"]
 position = Vector2(-15, -15)
 scale = Vector2(0.75, 0.75)
 polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)

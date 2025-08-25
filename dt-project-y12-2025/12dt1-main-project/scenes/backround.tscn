@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dbdcynmgxppcg" path="res://12dt1-main-project/scenes/character.tscn" id="1_tb8v1"]
 [ext_resource type="PackedScene" uid="uid://ddahg0lad1y1t" path="res://12dt1-main-project/scenes/dialogue_ui.tscn" id="2_bgt04"]
 
-[node name="Node2D" type="Node2D"]
+[node name="MainScene" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
