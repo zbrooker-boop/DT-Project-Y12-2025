@@ -8,7 +8,7 @@ var dialogue_line : Array = []
 
 func _ready():
 	#Load Dialogue
-	dialogue_line = load_dialogue("res://12dt1-main-project/story/story.json")
+	dialogue_line = load_dialogue("res://12dt1-main-project/story/second_scene.json")
 	dialogue_ui.choice_selected.connect(_on_choice_selected)
 	#Process first line of dialogue
 	dialogue_index = 0
@@ -16,7 +16,9 @@ func _ready():
 
 
 func _input(event):
-	if event.is_action_pressed("next_line"):
+	var line = dialogue_line[dialogue_index]
+	var has_choices= line.has("choices")
+	if event.is_action_pressed("next_line") and not has_choices:
 		if dialogue_ui.animate_text:
 			dialogue_ui.skip_text_animation()
 		else:
@@ -27,6 +29,12 @@ func _input(event):
 
 func process_current_line():
 	var line = dialogue_line[dialogue_index]
+	#Check for location
+	if line.has("location"):
+		dialogue_index += 1
+		process_current_line()
+		return
+	
 	#Check if it's a goto command
 	if line.has("goto"):
 		dialogue_index = get_anchor_position(line["goto"])
@@ -38,13 +46,20 @@ func process_current_line():
 		process_current_line()
 		return
 		
+		#Change Character expression
+	if line.has("speaker"):
+		var character_name = Character.get_enum_from_string(line["speaker"])
+		
 	if line.has("choices"):
 		dialogue_ui.display_choices(line["choices"])
-	else:
+	elif line.has("text"):
 		#Reading the current line of dialogue
-		var character_name = line["speaker"]
-		dialogue_ui.change_line(character_name, line["text"])
-		character.change_character(Character.get_enum_from_string(character_name))
+		var speaker_name = line["speaker"]
+		dialogue_ui.change_line(speaker_name, line["text"])
+	else:
+		dialogue_index += 1
+		process_current_line()
+		return
 
 func get_anchor_position(anchor: String):
 	#Find anchor point
@@ -74,3 +89,4 @@ func load_dialogue(file_path):
 
 func _on_choice_selected(anchor: String):
 	dialogue_index = get_anchor_position(anchor)
+	process_current_line()

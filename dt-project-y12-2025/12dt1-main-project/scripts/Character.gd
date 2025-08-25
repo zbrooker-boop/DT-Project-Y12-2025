@@ -10,16 +10,15 @@ enum Name {
 const CHARACTER_DETAILS : Dictionary = {
 	Name.You: {
 		"name" : "You",
-		"gender" : "female",
 		"sprite_frames" : null
 	},
 	Name.Daisy: {
-		"name" : "character1",
-		"gender" : "female",
+		"name" : "Daisy",
+		"sprite_frames": preload("res://12dt1-main-project/scenes/daisy_expressions.tres")
 	},
 Name.Emma: {
-		"name" : "character2",
-		"gender" : "female",
+		"name" : "Emma",
+		"sprite_frames": preload("res://12dt1-main-project/scenes/emma_expressions.tres")
 	}
 }
 

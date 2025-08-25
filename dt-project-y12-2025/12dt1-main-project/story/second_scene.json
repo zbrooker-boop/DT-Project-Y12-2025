@@ -1,0 +1,10 @@
+[
+	{"location" : "morning_club"}, 
+	{"speaker": "Emma", "text" : "Here it is. Do you like it?", "expression" : "smug"},
+	{"speaker": "Daisy", "text" : "Emma, give them a chance to breathe after you dragged them here.", "expression" : "annoyed"},
+	{"speaker": "Daisy", "text" : "Sorry about that. She get's excited really easily."},
+	{"speaker": "Emma", "text" : "No, I just see no point in wasting away my years being slow."},
+	{"speaker": "You", "text" : "It's fine!"},
+	{"speaker": "Daisy", "text" : "Okay, if you say so.", "expression" : "smile"},
+	{"speaker": "Emma", "text" : "See!.", "expression" : "smug"},
+]

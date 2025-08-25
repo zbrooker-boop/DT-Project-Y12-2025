@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://csl5mvh0t66h5"]
+[gd_scene load_steps=5 format=3 uid="uid://csl5mvh0t66h5"]
 
 [ext_resource type="PackedScene" uid="uid://dbdcynmgxppcg" path="res://12dt1-main-project/scenes/character.tscn" id="1_a0i50"]
 [ext_resource type="Script" uid="uid://dlkyen8ufkpbi" path="res://12dt1-main-project/scripts/main_scene.gd" id="1_iln0h"]
+[ext_resource type="Texture2D" uid="uid://c25c0dmuipaa2" path="res://12dt1-main-project/images/morning_hall.PNG" id="2_27uqc"]
 [ext_resource type="PackedScene" uid="uid://ddahg0lad1y1t" path="res://12dt1-main-project/scenes/dialogue_ui.tscn" id="2_iln0h"]
 
 [node name="MainScene" type="Node2D"]
@@ -14,8 +15,13 @@ layer = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -216.0
+offset_right = 384.0
+offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_27uqc")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -34,6 +40,7 @@ grow_vertical = 0
 
 [node name="CharacterSprite" parent="CanvasLayer2/Control" instance=ExtResource("1_a0i50")]
 unique_name_in_owner = true
+position = Vector2(0, -275)
 
 [node name="DialogueUI" parent="CanvasLayer2" instance=ExtResource("2_iln0h")]
 unique_name_in_owner = true

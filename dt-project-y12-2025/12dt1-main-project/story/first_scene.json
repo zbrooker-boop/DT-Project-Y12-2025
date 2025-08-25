@@ -1,0 +1,28 @@
+[
+	{"location": "morning_hall"},
+	{"speaker": "Emma", "text" : "Hey you! Are you the new kid?"},
+	{"speaker": "Daisy", "text" : "Emma, you should be polite and introduce yourself first."},
+	{"speaker": "Daisy", "text" : "Hi, my name is Daisy. Nice to meet you."},
+	{"speaker": "Emma", "text" : "Hello. I'm Emma."},
+	{"speaker": "You", "text" : "Hello. I am the new kid at this school!"},
+	{"speaker": "Daisy", "text" : "Wow!"},
+	{"speaker": "Emma", "text" : "Make a choice."},
+	{"choices":
+		[
+			{"text": "Blue.", "goto" : "1st_choice"},
+			{"text": "Red.", "goto" : "2nd_choice"}
+		]
+	},
+	{"anchor": "1st_choice"},
+	{"speaker": "Daisy", "text" : "This is my favourite colour!"},
+	{"speaker": "Emma", "text" : "Shame, I don't like it."},
+	{"goto" : "end"},
+	{"anchor": "2nd_choice"},
+	{"speaker": "Daisy", "text" : "This is a great colour!"},
+	{"speaker": "Emma", "text" : "My favourite."},
+	{"goto" : "end"},
+	{"anchor" : "end"},
+	{"speaker": "You", "text" : "What do I do now?"},
+	{"speaker": "Emma", "text" : "Come with us to our club room!"},
+	{"next_scene": "second_scene", "transition": "fade"}
+]

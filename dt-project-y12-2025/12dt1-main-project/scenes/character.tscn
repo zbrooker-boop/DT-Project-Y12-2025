@@ -1,23 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbdcynmgxppcg"]
+[gd_scene load_steps=3 format=3 uid="uid://dbdcynmgxppcg"]
 
 [ext_resource type="Script" uid="uid://bp246sorebwef" path="res://12dt1-main-project/scripts/character_sprite.gd" id="1_fof6j"]
-[ext_resource type="Texture2D" uid="uid://cewr4ymwobj5p" path="res://12dt1-main-project/sprites/emma_expressions/emma_normal.png" id="3_08yi2"]
-[ext_resource type="Texture2D" uid="uid://chtxctsfxh6fs" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_normal.png" id="3_kgsuh"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_lrify"]
+[ext_resource type="SpriteFrames" uid="uid://dpb8k6w80h034" path="res://12dt1-main-project/scenes/daisy_expressions.tres" id="2_h0xv0"]
 
 [node name="CharacterSprite" type="Node2D"]
 script = ExtResource("1_fof6j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_lrify")
-
-[node name="DaisyNormal" type="Sprite2D" parent="."]
-position = Vector2(246, -227)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_kgsuh")
-
-[node name="EmmaNormal" type="Sprite2D" parent="."]
-position = Vector2(-195, -230)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_08yi2")
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("2_h0xv0")
+animation = &"smile"

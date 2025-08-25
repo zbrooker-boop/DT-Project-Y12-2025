@@ -1,0 +1,68 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://dpb8k6w80h034"]
+
+[ext_resource type="Texture2D" uid="uid://d1njtecx0xu1o" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_angry.png" id="1_ovxna"]
+[ext_resource type="Texture2D" uid="uid://box40wh7t7hx7" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_annoyed.png" id="2_rmlrg"]
+[ext_resource type="Texture2D" uid="uid://chtxctsfxh6fs" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_normal.png" id="3_o28st"]
+[ext_resource type="Texture2D" uid="uid://b88d3b2gp2ul3" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_sad.png" id="4_rk3i4"]
+[ext_resource type="Texture2D" uid="uid://h0n0otr0h5k8" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_shocked.png" id="5_i3ref"]
+[ext_resource type="Texture2D" uid="uid://cd2jlqjchvhbf" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_smile.png" id="6_8lkdh"]
+[ext_resource type="Texture2D" uid="uid://biq51kqlht8dw" path="res://12dt1-main-project/sprites/daisy_expressions/daisy_talking.png" id="7_rmlrg"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ovxna")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rmlrg")
+}],
+"loop": true,
+"name": &"annoyed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_o28st")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rk3i4")
+}],
+"loop": true,
+"name": &"sad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_i3ref")
+}],
+"loop": true,
+"name": &"shocked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8lkdh")
+}],
+"loop": true,
+"name": &"smile",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_rmlrg")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}]

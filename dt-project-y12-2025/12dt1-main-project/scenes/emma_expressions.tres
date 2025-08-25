@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://b372c50jw07s5"]
+
+[ext_resource type="Texture2D" uid="uid://bw4chxet113r2" path="res://12dt1-main-project/sprites/emma_expressions/emma_angry.png" id="1_ojpvs"]
+[ext_resource type="Texture2D" uid="uid://di51knvjaxamt" path="res://12dt1-main-project/sprites/emma_expressions/emma_annoyed.png" id="2_d3x23"]
+[ext_resource type="Texture2D" uid="uid://cewr4ymwobj5p" path="res://12dt1-main-project/sprites/emma_expressions/emma_normal.png" id="3_jabpb"]
+[ext_resource type="Texture2D" uid="uid://bu02jf56vrvbs" path="res://12dt1-main-project/sprites/emma_expressions/emma_sad.png" id="4_4bjdg"]
+[ext_resource type="Texture2D" uid="uid://m4tgchteb8cf" path="res://12dt1-main-project/sprites/emma_expressions/emma_shocked.png" id="5_h37wj"]
+[ext_resource type="Texture2D" uid="uid://bnnw0akolnfcj" path="res://12dt1-main-project/sprites/emma_expressions/emma_smile.png" id="6_adxmb"]
+[ext_resource type="Texture2D" uid="uid://bdaftvwjw5rrf" path="res://12dt1-main-project/sprites/emma_expressions/emma_smug.png" id="7_ojmip"]
+[ext_resource type="Texture2D" uid="uid://bgnq1o3ihpjg7" path="res://12dt1-main-project/sprites/emma_expressions/emma_talking.png" id="8_d3x23"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ojpvs")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d3x23")
+}],
+"loop": true,
+"name": &"annoyed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jabpb")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4bjdg")
+}],
+"loop": true,
+"name": &"sad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_h37wj")
+}],
+"loop": true,
+"name": &"shocked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_adxmb")
+}],
+"loop": true,
+"name": &"smile",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ojmip")
+}],
+"loop": true,
+"name": &"smug",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_d3x23")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}]
