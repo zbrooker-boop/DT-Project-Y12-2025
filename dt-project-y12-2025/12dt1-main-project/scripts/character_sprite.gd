@@ -11,9 +11,7 @@ func change_character(character_name : Character.Name, expression: String = ""):
 	var animation_name = expression
 	if sprite_frames:
 		animated_sprite.sprite_frames = sprite_frames
-		if character_name == Character.Name.You:
-			animated_sprite.play("normal") 
-		elif expression:
+		if expression:
 			animated_sprite.play(expression)
 		else: 			
 			animated_sprite.play("talking") 
