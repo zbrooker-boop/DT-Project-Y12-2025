@@ -9,4 +9,4 @@ script = ExtResource("1_fof6j")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
 sprite_frames = ExtResource("2_h0xv0")
-animation = &"smile"
+animation = &"normal"

@@ -6,5 +6,5 @@
 	{"speaker": "Emma", "text" : "No, I just see no point in wasting away my years being slow."},
 	{"speaker": "You", "text" : "It's fine!"},
 	{"speaker": "Daisy", "text" : "Okay, if you say so.", "expression" : "smile"},
-	{"speaker": "Emma", "text" : "See!.", "expression" : "smug"},
+	{"speaker": "Emma", "text" : "See!", "expression" : "smug"},
 ]

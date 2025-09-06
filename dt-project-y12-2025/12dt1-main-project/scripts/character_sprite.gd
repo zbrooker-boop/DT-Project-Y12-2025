@@ -5,15 +5,17 @@ extends Node2D
 func _ready():
 	pass
 
-func change_character(character_name : Character.Name, is_talking : bool, expression: String):
+func change_character(character_name : Character.Name, expression: String = ""):
 	var character_info = Character.CHARACTER_DETAILS[character_name]
 	var sprite_frames = character_info["sprite_frames"]
 	var animation_name = expression
 	if sprite_frames:
 		animated_sprite.sprite_frames = sprite_frames
-		if is_talking:
+		if character_name == Character.Name.You:
+			animated_sprite.play("normal") 
+		elif expression:
+			animated_sprite.play(expression)
+		else: 			
 			animated_sprite.play("talking") 
-		else:
-			animated_sprite.play("normal")
 	else:
 		animated_sprite.play("normal")

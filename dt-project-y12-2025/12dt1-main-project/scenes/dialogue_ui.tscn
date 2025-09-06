@@ -82,7 +82,7 @@ grow_vertical = 2
 text = "Name"
 label_settings = SubResource("LabelSettings_xnx23")
 
-[node name="Control" type="Control" parent="."]
+[node name="Detail" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -94,7 +94,7 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="Arrow" type="Polygon2D" parent="Control"]
+[node name="Arrow" type="Polygon2D" parent="Detail"]
 position = Vector2(-15, -15)
 scale = Vector2(0.75, 0.75)
 polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)
