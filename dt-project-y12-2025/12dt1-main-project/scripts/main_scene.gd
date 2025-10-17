@@ -4,7 +4,7 @@ extends Node2D
 @onready var dialogue_ui = %DialogueUI
 
 var transition_effect: String = "fade"
-var dialogue_file: String = "res://12dt1-main-project/story/first_scene.json"
+var dialogue_file: String = "res://12dt1-main-project/story/second_scene.json"
 var dialogue_index : int = 0
 var dialogue_lines : Array = []
 
