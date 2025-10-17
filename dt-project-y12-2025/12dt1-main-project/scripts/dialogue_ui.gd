@@ -16,7 +16,6 @@ var current_visable_characters : int = 0
 func _ready():
 	choice_list.hide()
 
-
 func _process(delta):
 	if animate_text:
 		if dialogue_line.visible_ratio < 1:

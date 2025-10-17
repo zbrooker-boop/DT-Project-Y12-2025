@@ -3,13 +3,17 @@ extends Node2D
 @onready var character = %CharacterSprite
 @onready var dialogue_ui = %DialogueUI
 
+var transition_effect: String = "fade"
+var dialogue_file: String = "res://12dt1-main-project/story/first_scene.json"
 var dialogue_index : int = 0
 var dialogue_lines : Array = []
 
 func _ready():
 	#Load Dialogue
-	dialogue_lines = load_dialogue("res://12dt1-main-project/story/second_scene.json")
+	dialogue_lines = load_dialogue(dialogue_file)
 	dialogue_ui.choice_selected.connect(_on_choice_selected)
+	#SceneManager.transition_out_completed.connect(_on_transition_out_completed)
+	#SceneManager.transition_in_completed.connect(_on_transition_in_completed)
 	#Process first line of dialogue
 	dialogue_index = 0
 	process_current_line()
@@ -29,6 +33,12 @@ func _input(event):
 
 func process_current_line():
 	var line = dialogue_lines[dialogue_index]
+	
+	#Check if this is end of scene
+	if line.has("next_scene"):
+		var next_scene = line["next_scene"]
+		dialogue_file = "res://12dt1-main-project/story/" + next_scene + ".json"
+	
 	#Check for location
 	if line.has("location"):
 		dialogue_index += 1

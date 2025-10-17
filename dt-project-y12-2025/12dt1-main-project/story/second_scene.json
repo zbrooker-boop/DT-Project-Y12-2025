@@ -7,4 +7,5 @@
 	{"speaker": "You", "text" : "It's fine!"},
 	{"speaker": "Daisy", "text" : "Okay, if you say so.", "expression" : "smile"},
 	{"speaker": "Emma", "text" : "See!", "expression" : "smug"},
+	{"next_scene": "", "transition": "fade"}
 ]
