@@ -2,8 +2,10 @@ extends Node2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+
 func _ready():
 	pass
+
 
 func change_character(character_name : Character.Name, expression: String = ""):
 	var character_info = Character.CHARACTER_DETAILS[character_name]

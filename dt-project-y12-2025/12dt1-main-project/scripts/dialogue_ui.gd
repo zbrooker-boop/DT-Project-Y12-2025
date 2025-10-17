@@ -16,6 +16,7 @@ var current_visable_characters : int = 0
 func _ready():
 	choice_list.hide()
 
+
 func _process(delta):
 	if animate_text:
 		if dialogue_line.visible_ratio < 1:
@@ -24,12 +25,14 @@ func _process(delta):
 		else: 
 			animate_text = false
 
+
 func change_line(speaker: String, line : String):
 	speaker_name.text = speaker
 	current_visable_characters = 0
 	dialogue_line.text = line
 	dialogue_line.visible_characters = 0
 	animate_text = true
+
 
 func display_choices(choices: Array):
 	#Clear possible exsiting choices
@@ -46,8 +49,10 @@ func display_choices(choices: Array):
 		
 	choice_list.show()
 
+
 func skip_text_animation():
 	dialogue_line.visible_ratio = 1
+
 
 func _on_choice_button_pressed(anchor: String):
 	choice_selected.emit(anchor)

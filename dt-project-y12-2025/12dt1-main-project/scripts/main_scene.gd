@@ -8,6 +8,7 @@ var dialogue_file: String = "res://12dt1-main-project/story/first_scene.json"
 var dialogue_index : int = 0
 var dialogue_lines : Array = []
 
+
 func _ready():
 	#Load Dialogue
 	dialogue_lines = load_dialogue(dialogue_file)
@@ -30,7 +31,7 @@ func _input(event):
 				dialogue_index += 1
 				process_current_line()
 
-
+#Processes what the current line of dialogue says and hwo to do it
 func process_current_line():
 	var line = dialogue_lines[dialogue_index]
 	
@@ -76,6 +77,7 @@ func process_current_line():
 		process_current_line()
 		return
 
+
 func get_anchor_position(anchor: String):
 	#Find anchor point
 	for i in range(dialogue_lines.size()):
@@ -101,6 +103,7 @@ func load_dialogue(file_path):
 			print("Error.")
 			return null
 		return json_content
+
 
 func _on_choice_selected(anchor: String):
 	dialogue_index = get_anchor_position(anchor)

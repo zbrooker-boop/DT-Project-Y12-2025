@@ -9,6 +9,7 @@ var transition_layer : CanvasLayer
 var transition_rect : ColorRect
 var transition_time : float = 0.5
 
+
 func _ready() -> void:
 	transition_layer = CanvasLayer.new()
 	transition_layer.layer = 100 
@@ -20,7 +21,8 @@ func _ready() -> void:
 	transition_rect.visible = false
 	transition_layer.add_child(transition_rect)
 	get_tree().root.add_child(transition_layer)
-	
+
+
 func transition_out(effect: String = "fade"):
 	match effect:
 		"fade":
@@ -28,12 +30,14 @@ func transition_out(effect: String = "fade"):
 		_:
 			_fade_out()
 
+
 func transition_in(effect: String = "fade"):
 	match effect:
 		"fade":
 			_fade_in()
 		_:
 			_fade_in()
+
 
 func _fade_out():
 	transition_rect.position = Vector2.ZERO
@@ -46,6 +50,7 @@ func _fade_out():
 	tween.tween_callback(func():
 		transition_out_completed.emit()
 	)
+
 
 func _fade_in():
 	transition_rect.position = Vector2.ZERO
